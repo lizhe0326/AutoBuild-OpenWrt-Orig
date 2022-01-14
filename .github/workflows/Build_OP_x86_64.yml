@@ -65,6 +65,8 @@ jobs:
       run: |
         git clone $REPO_URL
         cd openwrt
+        git checkout $REPO_BRANCH
+        git fetch -t
         git checkout v21.02.1
         
     - name: Update & Install feeds
