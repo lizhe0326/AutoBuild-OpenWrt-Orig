@@ -15,8 +15,8 @@ on:
   #  branches: 
   #    - master
 
-  # schedule:
-  #  - cron: 0 8 * * 5
+  schedule:
+   - cron: 0 8 * * 5
   
   watch:
    types: [started]
@@ -61,13 +61,14 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/openwrt/openwrt
-        REPO_BRANCH: openwrt-21.02
+        REPO_BRANCH: master
       run: |
         git clone $REPO_URL
         cd openwrt
         git checkout $REPO_BRANCH
         git fetch -t
-        git checkout v21.02.1
+        git tag -l
+        git checkout `git tag -l | tail -n 1`
         
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -76,10 +77,10 @@ jobs:
         ./scripts/feeds install -a
         
 
-    #- name: Import external feeds - passwall
-    #  working-directory: ./openwrt
-    #  run: |
-    #    git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
+    - name: Import external feeds - passwall
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
     #    git clone "your_github_link" package/"your_folder_name"      
 
     #- name: Import external feeds - JerryKuKu Argon
