@@ -8,8 +8,8 @@
 name: Build_K2P
 
 on: 
-  # release:
-  #   types: [published]
+  release:
+    types: [published]
 
   #push:
   #  branches: 
