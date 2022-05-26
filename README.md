@@ -4,8 +4,8 @@
 该仓库编译了如下设备的固件:
 
 - x86_64
-- 斐讯K2P (mesh支持)
-- Newifi D2 (mesh支持)
+- 斐讯K2P
+- Newifi D2
 
 
 # AutoBuild-OpenWrt-Orig
