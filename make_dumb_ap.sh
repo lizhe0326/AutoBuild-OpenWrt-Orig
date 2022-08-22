@@ -45,20 +45,20 @@ WIFI_NAME_0="OpenWrt-2.4G"
 WIFI_PWD_0="xmh961028"
 WIFI_RADIO_0=radio0
 WIFI_CHANNEL_0=1
-WIFI_MOBDOMAIN_0='1234'
+WIFI_MOBDOMAIN_0='1111'
 
 WIFI_NAME_1="OpenWrt"
 WIFI_PWD_1="xmh961028"
 WIFI_RADIO_1=radio1
 WIFI_CHANNEL_1=36
-WIFI_MOBDOMAIN_1='4321'
+WIFI_MOBDOMAIN_1='2222'
 
 # install the wpad full package
 
-opkg update
-opkg remove wpad*
-opkg install --force-overwrite wpad-openssl
-opkg install luci-app-dawn
+# opkg update
+# opkg remove wpad*
+# opkg install --force-overwrite wpad-openssl
+# opkg install luci-app-dawn
 
 # delete the "OpenWrt" radios
 
@@ -75,6 +75,7 @@ uci set wireless.wifinet0.encryption='psk2'
 uci set wireless.wifinet0.key=$WIFI_PWD_0
 uci set wireless.wifinet0.ieee80211r='1'
 uci set wireless.wifinet0.mobility_domain=$WIFI_MOBDOMAIN_0
+uci set wireless.wifinet0.reassociation_deadline='20000'
 uci set wireless.wifinet0.ft_over_ds='0'
 uci set wireless.wifinet0.ft_psk_generate_local='1'
 uci set wireless.wifinet0.network='lan'
@@ -101,6 +102,7 @@ uci set wireless.wifinet1.encryption='psk2'
 uci set wireless.wifinet1.key=$WIFI_PWD_1
 uci set wireless.wifinet1.ieee80211r='1'
 uci set wireless.wifinet1.mobility_domain=$WIFI_MOBDOMAIN_1
+uci set wireless.wifinet1.reassociation_deadline='20000'
 uci set wireless.wifinet1.ft_over_ds='0'
 uci set wireless.wifinet1.ft_psk_generate_local='1'
 uci set wireless.wifinet1.network='lan'
