@@ -46,7 +46,7 @@ jobs:
         git checkout $REPO_BRANCH
         git fetch -t
         git tag -l
-        git checkout `git tag -l | tail -n 1`
+        git checkout v22.03.0
         
     - name: Update & Install feeds
       working-directory: ./openwrt
