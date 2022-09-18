@@ -1,0 +1,4 @@
+make menuconfig
+./scripts/diffconfig.sh > diffconfig
+make defconfig
+
