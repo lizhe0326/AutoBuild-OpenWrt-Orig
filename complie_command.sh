@@ -10,9 +10,9 @@ sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 ./scripts/feeds install -a
 
 
-# cp ../K2P.config .config
-# make defconfig
-# make menuconfig
+cp ../x86_64.config .config
+make defconfig
+make menuconfig
 # ./scripts/diffconfig.sh > ../diffconfig
 
 
