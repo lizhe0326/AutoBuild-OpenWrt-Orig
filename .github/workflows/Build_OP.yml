@@ -27,7 +27,8 @@ jobs:
 
     strategy:    
       matrix:
-        config: [CR6608, K2P, Newifi_D2, x86_64, AX6S, 360T7]
+        # config: [CR6608, K2P, Newifi_D2, x86_64, AX6S, 360T7]
+        config: [x86_64]
 
     steps:
     - name: Free Disk Space (Ubuntu)
