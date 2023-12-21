@@ -27,8 +27,8 @@ jobs:
 
     strategy:    
       matrix:
-        # config: [CR6608, K2P, Newifi_D2, x86_64, AX6S, 360T7]
-        config: [x86_64]
+        config: [CR6608, K2P, x86_64, AX6S]
+        # config: [x86_64]
 
     steps:
     - name: Free Disk Space (Ubuntu)
@@ -68,7 +68,8 @@ jobs:
         git checkout $REPO_BRANCH
         git fetch -t
         git tag -l
-        latest_tag=`git tag --sort=committerdate | tail -1`
+        # latest_tag=`git tag --sort=committerdate | tail -1`
+        latest_tag=v23.05.2
         git checkout ${latest_tag}
         
     - name: Update & Install feeds
