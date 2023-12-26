@@ -61,7 +61,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/dimfishr/openwrt.git
-        REPO_BRANCH: master
+        REPO_BRANCH: xiaomi-ax3000t
       run: |
         git clone $REPO_URL
         cd openwrt
