@@ -65,9 +65,8 @@ jobs:
       run: |
         git clone $REPO_URL
         cd openwrt
-        git checkout $REPO_BRANCH
         git fetch -t
-        git checkout xiaomi-ax3000t
+        git checkout $REPO_BRANCH
         
     - name: Update & Install feeds
       working-directory: ./openwrt
