@@ -114,3 +114,12 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 3
+    
+    - name: Push Routine
+      run: |
+        git config --global user.name "Cosmos-Break"
+        git config --global user.email "438854233@qq.com"
+        date -R >> test
+        git add test
+        git commit -m "push"
+        git push
