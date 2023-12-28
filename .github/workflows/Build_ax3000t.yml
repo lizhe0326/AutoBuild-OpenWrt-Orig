@@ -119,6 +119,7 @@ jobs:
       run: |
         git config --global user.name "Cosmos-Break"
         git config --global user.email "438854233@qq.com"
+        git pull
         date -R >> test
         git add test
         git commit -m "push"
