@@ -112,8 +112,8 @@ jobs:
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 1
-        keep_minimum_runs: 3
+        retain_days: 90
+        keep_minimum_runs: 10
     
     - name: Push Routine
       run: |
