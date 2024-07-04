@@ -82,14 +82,14 @@ uci set wireless.wifinet0.network='lan'
 uci set wireless.wifinet0.bss_transition='1'
 uci set wireless.wifinet0.wnm_sleep_mode='1'
 uci set wireless.wifinet0.time_advertisement='2'
-uci set wireless.wifinet0.time_zone='GMT0'
+uci set wireless.wifinet0.time_zone='CST-8'
 uci set wireless.wifinet0.ieee80211k='1'
 uci set wireless.wifinet0.rrm_neighbor_report='1'
 uci set wireless.wifinet0.rrm_beacon_report='1'
 uci set "wireless.$WIFI_RADIO_0.htmode"='HT20'
 uci set "wireless.$WIFI_RADIO_0.band"='2g'
 uci set "wireless.$WIFI_RADIO_0.channel"=$WIFI_CHANNEL_0
-uci set "wireless.$WIFI_RADIO_0.country"='AU'
+# uci set "wireless.$WIFI_RADIO_0.country"='AU'
 uci delete "wireless.$WIFI_RADIO_0.disabled"
 
 # create the AP Wifi 5G
@@ -109,14 +109,14 @@ uci set wireless.wifinet1.network='lan'
 uci set wireless.wifinet1.bss_transition='1'
 uci set wireless.wifinet1.wnm_sleep_mode='1'
 uci set wireless.wifinet1.time_advertisement='2'
-uci set wireless.wifinet1.time_zone='GMT0'
+uci set wireless.wifinet1.time_zone='CST-8'
 uci set wireless.wifinet1.ieee80211k='1'
 uci set wireless.wifinet1.rrm_neighbor_report='1'
 uci set wireless.wifinet1.rrm_beacon_report='1'
 uci set "wireless.$WIFI_RADIO_1.htmode"='VHT80'
 uci set "wireless.$WIFI_RADIO_1.band"='5g'
 uci set "wireless.$WIFI_RADIO_1.channel"=$WIFI_CHANNEL_1
-uci set "wireless.$WIFI_RADIO_1.country"='AU'
+# uci set "wireless.$WIFI_RADIO_1.country"='AU'
 uci delete "wireless.$WIFI_RADIO_1.disabled"   
 
 uci commit
