@@ -11,9 +11,9 @@ on:
   # release:
   #   types: [published]
 
-  # push:
-  #  branches: 
-  #    - master
+  push:
+   branches: 
+     - master
 
   schedule:
    - cron: 0 0 1,16 * *
@@ -27,7 +27,7 @@ jobs:
 
     strategy:    
       matrix:
-        config: [CR6608]
+        config: [CR6608, AX6S, x86_64]
         # config: [CR6608, K2P, x86_64, AX6S]
         # config: [x86_64]
 
